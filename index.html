@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11151d">
+  <meta name="description" content="WOLFS AI — քո խելացի AI օգնականը">
+  <title>WOLFS AI | AI Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="WOLFS AI գլխավոր էջ">
+        <span class="brand-logo">W</span>
+        <span>WOLFS <b>AI</b></span>
+      </a>
+
+      <button id="newChat" class="new-chat">＋ Նոր զրույց</button>
+
+      <div class="section-label">ՔՈ ԶՐՈՒՅՑՆԵՐԸ</div>
+      <div id="chatList" class="chat-list"></div>
+
+      <div class="sidebar-bottom">
+        <span class="online-dot"></span>
+        <div>
+          <strong>WOLFS AI</strong>
+          <small>Քո AI օգնականը</small>
+        </div>
+        <span class="version">V1.0</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-button"
+          aria-label="Բացել մենյուն">☰</button>
+        <div class="mobile-brand">🐺 WOLFS <span>AI</span></div>
+        <div class="top-status"><i></i> AI CHAT</div>
+      </header>
+
+      <section class="workspace">
+        <div id="welcome" class="welcome">
+          <div class="hero-logo">🐺</div>
+          <p class="eyebrow">ԱՐՀԵՍՏԱԿԱՆ ԲԱՆԱԿԱՆՈՒԹՅՈՒՆ</p>
+          <h1>Բարև՛, ի՞նչ ենք<br><span>անելու այսօր։</span></h1>
+          <p class="intro">
+            Քո գաղափարները, հարցերը և ծրագրավորման նախագծերը՝
+            մեկ վայրում։
+          </p>
+
+          <div class="quick-grid">
+            <button class="quick" data-question="Սովորեցրու ինձ ծրագրավորում զրոյից։">
+              <span>⌘</span>
+              <strong>Սովորել ծրագրավորում</strong>
+              <small>Քայլ առ քայլ դասեր</small>
+            </button>
+            <button class="quick" data-question="Օգնիր ինձ ստեղծել գեղեցիկ կայք։">
+              <span>🌐</span>
+              <strong>Ստեղծել կայք</strong>
+              <small>Գաղափարից մինչև կոդ</small>
+            </button>
+            <button class="quick" data-question="Պատմիր մի հետաքրքիր գիտական փաստ։">
+              <span>✦</span>
+              <strong>Նոր գիտելիքներ</strong>
+              <small>Բացահայտիր աշխարհը</small>
+            </button>
+            <button class="quick" data-question="Բացատրիր JavaScript-ը պարզ հայերենով։">
+              <span>⚡</span>
+              <strong>Գրել կոդ</strong>
+              <small>Օգնություն ծրագրավորման մեջ</small>
+            </button>
+          </div>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-area">
+        <form id="chatForm" class="composer">
+          <textarea id="prompt" rows="1" maxlength="4000"
+            placeholder="Հարցրու WOLFS AI-ին..."
+            aria-label="Գրիր քո հարցը" required></textarea>
+
+          <button id="micBtn" class="tool-button" type="button"
+            aria-label="Խոսել ձայնով" title="Ձայնային մուտք">🎤</button>
+
+          <button id="sendBtn" class="send-button" type="submit"
+            aria-label="Ուղարկել">➤</button>
+        </form>
+
+        <p id="voiceStatus" class="voice-status" aria-live="polite"></p>
+        <p class="disclaimer">
+          WOLFS AI-ն կարող է սխալվել։ Մի՛ ուղարկիր գաղտնի տվյալներ։
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
